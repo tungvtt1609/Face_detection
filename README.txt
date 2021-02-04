@@ -1,0 +1,3 @@
+- Thư viện cần cài: opencv, dlib.
+- Sau khi cài thì thay đổi đường link ảnh và module face_detector cho đúng.
+- Run chương trình.
