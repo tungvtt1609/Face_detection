@@ -35,9 +35,9 @@ for face in faces_cnn:
   x = face.rect.left()
   y = face.rect.top()
   w = face.rect.right() - x
-  h = face.rect.bottom() - y
+  z = face.rect.bottom() - y
 
-  cv2.rectangle(image, (x,y), (x+w,y+h), (0,0,255), 2)
+  cv2.rectangle(image, (x,y), (x+w,y+z), (0,0,255), 2)
 
 cv2.imshow("image", image)
 cv2.waitKey(0)
