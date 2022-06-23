@@ -20,9 +20,9 @@ for face in faces_hog:
   x = face.left()
   y = face.top()
   w = face.right() - x
-  h = face.bottom() - y
+  m = face.bottom() - y
 
-  cv2.rectangle(image, (x,y), (x+w,y+h), (0,255,0), 2)
+  cv2.rectangle(image, (x,y), (x+w,y+m), (0,255,0), 2)
 
 # Thực hiện xác định bằng CNN
 start = time.time()
@@ -35,9 +35,9 @@ for face in faces_cnn:
   x = face.rect.left()
   y = face.rect.top()
   w = face.rect.right() - x
-  z = face.rect.bottom() - y
+  m = face.rect.bottom() - y
 
-  cv2.rectangle(image, (x,y), (x+w,y+z), (0,0,255), 2)
+  cv2.rectangle(image, (x,y), (x+w,y+m), (0,0,255), 2)
 
 cv2.imshow("image", image)
 cv2.waitKey(0)
